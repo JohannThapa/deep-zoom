@@ -36,3 +36,158 @@
     transform: rotate(360deg);
   }
 }
+.loader{
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  top: 45%;
+}
+.loader div { 
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid navy;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: navy transparent transparent transparent;
+}
+.loader div:nth-of-type(1) {
+  animation-delay: -0.45s;
+}
+.loader div:nth-of-type(2) {
+  animation-delay: -0.3s;
+}
+.loader div:nth-of-type(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.thumb-banel{
+  position: relative;
+  height: 113px;
+  z-index: 4;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.thumbnailView{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden; 
+}
+
+.panelListingThumbs{
+  clear: both;
+  list-style: none;
+  padding: 0;
+  white-space: nowrap;
+  margin-top: 13px;
+  margin-bottom: 4px;
+}
+
+.panelListingThumbs li{
+  box-sizing: border-box;
+    padding: 0 10px 0 10px;
+    display: inline-block;
+}
+.panelListingThumbs img{
+  margin: 8px;
+}
+
+.toolbar-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.toolbar-controller{
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 14px;
+  border: 0;
+  font-size: 1rem;
+  padding: 10px;
+}
+.toolbar-controller:hover{
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.toolbar-dropdownWarapper{
+  position: relative;
+  display: inline-block;
+}
+
+
+
+.toolbar-dropdown{
+  position: absolute;
+  top: 50px;
+  left: -65px;
+  background: #342f2e;
+  color: #e3e3e3;
+  width: 100px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #716c6b;
+}
+.toolbar-dropdown button{
+  padding: 0.25rem .5rem;
+  color: #f0f0f0;
+  display: inline-block;
+  width: 100%;
+  font-size: 10px;
+}
+
+.toolbar-dropdown button:hover{
+  background: #716c6b;
+  transition: all 0.25s ease-in-out;
+}
+
+.osdTopRow{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 60px;
+}
+
+.workTitle{
+  text-align: left;
+  color: white;
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+.toolBarWrapper{
+  font-size: 1rem;
+  color: #e3e3e3;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  top: 80px;
+  padding-right: 1rem;
+}
+.toolBarWrapper select{
+  color: #e3e3e3;
+  background-color: #716c6b;
+  height: auto;
+  margin: 1rem 0 1rem 1rem;
+}
