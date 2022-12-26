@@ -6,7 +6,9 @@ import {
 } from "react-router-dom";
 import IffViewer from "./pages/iifViewer";
 import SimpleViewer from "./pages/simpleViewer";
+import Clover from './pages/clover';
 import Layout from "./layout";
+import StaticViewer from './pages/library';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<IffViewer />} />
           <Route path="simple" element={<SimpleViewer />} />
+          <Route path="clover" element={<Clover />} />
+          <Route path="static" element={<StaticViewer />} />
         </Route>
       </Routes>
     </div>

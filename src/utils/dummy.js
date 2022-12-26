@@ -988,4 +988,30 @@ export const dummy = {
       },
     ],
   };
-  
+ export const highsmith = {
+    Image: {
+        xmlns: "http://schemas.microsoft.com/deepzoom/2008",
+        Url: "https://openseadragon.github.io/example-images/highsmith/highsmith_files/",
+        Format: "jpg",
+        Overlap: "2",
+        TileSize: "256",
+        Size: {
+            Width:  "7026",
+            Height: "9221"
+        }
+    }
+};
+
+export const duomo = {
+    Image: {
+        xmlns: "http://schemas.microsoft.com/deepzoom/2008",
+        Url: "https://openseadragon.github.io/example-images/duomo/duomo_files/",
+        Format: "jpg",
+        Overlap: "2",
+        TileSize: "256",
+        Size: {
+            Width:  "13920",
+            Height: "10200"
+        }
+    }
+};

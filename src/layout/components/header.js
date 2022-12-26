@@ -36,8 +36,10 @@ const Header = () => (
     <Link to="/" style={{flexGrow:6, padding: "1rem"}}>
       Home
     </Link>
-    <CustomLink to="/">iifViewer</CustomLink>
+    <CustomLink to="/">Custom</CustomLink>
     <CustomLink to="/simple">simple</CustomLink>
+    <CustomLink to="/clover">Clover</CustomLink>
+    <CustomLink to="/static">deepzoom</CustomLink>
     <span aria-label="logo" role="img">
       🐩
     </span>
@@ -49,7 +51,7 @@ function CustomLink({ children, to, ...props }) {
 
   return (
     <div
-    style={{flexGrow:2, padding: "1rem"}}
+    style={{flexGrow:1, padding: "1rem"}}
     >
       <Link
         style={{ textDecoration: match ? "underline" : "none"}}
