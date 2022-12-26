@@ -1,7 +1,7 @@
 
 
 import * as React from "react";
-import OpenSeadragonViewer from "../../openSeadragonViewer";
+import OpenSeadragonViewer from "../../components/openSeadragonViewer";
 import { dummy } from "../../utils/dummy";
 
 const manifestUrl =

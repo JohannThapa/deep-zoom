@@ -1,16 +1,16 @@
 import React, { useEffect, useState, useContext } from "react";
 import PropTypes from "prop-types";
-import Toolbar from "../toolbar";
-import TileSourceSelect from "../tiles/sourceSelect";
-import Thumbnails from "../thumbnails";
-import { ConfigContext } from "../../utils/configContext";
+import Toolbar from "../../toolbar";
+import TileSourceSelect from "../../tiles/sourceSelect";
+import Thumbnails from "../../thumbnails";
+import { ConfigContext } from "../../../utils/configContext";
 import OpenSeadragon, { Point } from "openseadragon";
 
 import {
   updateUrl,
   parseHash,
   getCanvasImageResources,
-} from "../../utils/helper";
+} from "../../../utils/helper";
 import {css } from "@emotion/react";
 
 const osdTopRow = css`
@@ -303,6 +303,7 @@ const Viewer = ({ manifest }) => {
       <div
         id={configProps.containerId}
         css={openSeadragonContainer}
+        className="openSeadragonContainer"
       ></div>
          {configProps?.showThumbnails && canvasImageResources.length > 1 && (
         <div>

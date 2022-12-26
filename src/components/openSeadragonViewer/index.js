@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-import Viewer from "../components/viewer";
-import SimpleOpenSeaDragonViewer from "../components/viewer/simple/simpleViewer";
-import Loading from "../components/loader";
-import ErrorBoundary from "../utils/errorBoundary";
-import { ConfigContext } from "../utils/configContext";
+import Viewer from "./viewer";
+import Loading from "../../components/loader";
+import ErrorBoundary from "../../utils/errorBoundary";
+import { ConfigContext } from "../../utils/configContext";
 
 import { css } from "@emotion/react";
 const wrapper = css`

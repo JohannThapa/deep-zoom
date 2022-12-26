@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import SimpleOpenSeadragonViewer from "../../openSeadragonViewer/simple";
+import SimpleOpenSeadragonViewer from "../../components/openSeadragonViewer/simple";
 
 export default function SimpleViewer() {
     const [images, setImages] = useState([]);
