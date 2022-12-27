@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "@react/router";
 import {
   Routes,
   Route,
@@ -9,6 +8,7 @@ import {
   useResolvedPath,
 } from "react-router-dom";
 import { css } from "@emotion/react";
+import logo from "../../logo.svg";
 
 const headrStyle = css`
   float: left;
@@ -34,7 +34,7 @@ const Header = () => (
   }}
   >
     <Link to="/" style={{flexGrow:6, padding: "1rem"}}>
-      Home
+      <img src={logo} width={60}/>
     </Link>
     <CustomLink to="/">Custom</CustomLink>
     <CustomLink to="/simple">simple</CustomLink>

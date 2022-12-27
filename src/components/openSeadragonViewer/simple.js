@@ -1,5 +1,6 @@
 import OpenSeaDragon from "openseadragon";
 import React, { useEffect, useState } from "react";
+import "./style.css";
 
 const SimpleOpenSeadragonViewer = ({ image }) => {
   const [viewer, setViewer] = useState(null);
@@ -39,7 +40,9 @@ const SimpleOpenSeadragonViewer = ({ image }) => {
       id="openSeaDragon"
       style={{
         height: "800px",
-        width: "1200px",
+        width: "800px",
+        position: "absolute",
+        top: 0,
       }}
     ></div>
   );

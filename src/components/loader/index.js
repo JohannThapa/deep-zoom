@@ -45,7 +45,7 @@ export default function Loading({ active = true }) {
     return <></>;
   }
   return (
-    <div css={LoadingStyles} className="loader">
+    <div css={LoadingStyles} className="LoadingStyles">
       <div></div>
       <div></div>
       <div></div>

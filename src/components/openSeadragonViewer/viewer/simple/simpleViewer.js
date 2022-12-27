@@ -2,11 +2,13 @@ import OpenSeaDragon from "openseadragon";
 import React, { useEffect, useState } from "react";
 
 const SimpleOpenSeaDragonViewer = ({ image }) => {
+  console.log(image)
   const [viewer, setViewer] = useState();
 
   useEffect(() => {
     if (image && viewer) {
       viewer.open(image?.source);
+      console.log(image?.source)
     }
      
   }, [image]);

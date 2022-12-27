@@ -98,7 +98,7 @@ const OpenSeadragonViewer = ({
             </ErrorBoundary>
         </ConfigContext.Provider>
     ) : (
-        <div css={loaderWrapper}>
+        <div css={loaderWrapper} className="loaderWrapper">
             <Loading active={true} />
         </div>
     );
