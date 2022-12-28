@@ -37,7 +37,7 @@ const Header = () => (
       <img src={logo} width={60}/>
     </Link>
     {/* <CustomLink to="/">Custom</CustomLink> */}
-    <CustomLink to="/tiles">Tiles</CustomLink>
+    <CustomLink to="/">Tiles</CustomLink>
     <CustomLink to="/osm">OSM</CustomLink>
     <CustomLink to="/tms">TMS</CustomLink>
     <CustomLink to="/map-tiler">Map Tiler</CustomLink>
