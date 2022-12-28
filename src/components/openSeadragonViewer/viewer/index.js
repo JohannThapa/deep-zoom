@@ -85,10 +85,12 @@ const Viewer = ({ manifest }) => {
     setCanvasImageResources(getCanvasImageResources(manifest));
      
   }, []);
-
+console.log('canvasImageResources',canvasImageResources)
+console.log('canvasImageResources',canvasImageResources)
   useEffect(() => {
     const params = parseHash();
     const tileSource = params["tilesource"];
+    console.log('tileSource',tileSource)
     setCurrentTileSource(
       canvasImageResources.length > 0
         ? canvasImageResources[tileSource || 0]

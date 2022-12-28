@@ -13,6 +13,7 @@ export default function SimpleViewer() {
 
   const getImages = async () => {
     const response = await fetch(slideUrl);
+    console.log(response.body)
     let image = await response?.json();
     console.log("image", image);
     setImages(image?.groups);
@@ -21,6 +22,7 @@ export default function SimpleViewer() {
     console.log("images.group[0]", images[0]?.slides);
     previewImage(images[0]?.slides[0]);
   }, images);
+  // useEffect(() =>  previewImage(images[0]?.slides[0]), images)
 
   const previewImage = async (slide) => {
     setLoader(false);

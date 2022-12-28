@@ -36,10 +36,14 @@ const Header = () => (
     <Link to="/" style={{flexGrow:6, padding: "1rem"}}>
       <img src={logo} width={60}/>
     </Link>
-    <CustomLink to="/">Custom</CustomLink>
-    <CustomLink to="/simple">simple</CustomLink>
-    <CustomLink to="/clover">Clover</CustomLink>
-    <CustomLink to="/static">deepzoom</CustomLink>
+    {/* <CustomLink to="/">Custom</CustomLink> */}
+    <CustomLink to="/tiles">Tiles</CustomLink>
+    <CustomLink to="/osm">OSM</CustomLink>
+    <CustomLink to="/tms">TMS</CustomLink>
+    <CustomLink to="/map-tiler">Map Tiler</CustomLink>
+    {/* <CustomLink to="/simple">simple</CustomLink> */}
+    {/* <CustomLink to="/clover">Clover</CustomLink> */}
+    <CustomLink to="/static">DZI</CustomLink>
     <span aria-label="logo" role="img">
       🐩
     </span>

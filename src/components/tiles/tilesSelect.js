@@ -35,7 +35,7 @@ const TileSourceSelect = ({
   return (
     <div
       css={dropdownSelectWrapper}
-      className="osrv-tilesource-select-wrapper"
+      className="dropdownSelectWrapper"
     >
       <Select
         classNamePrefix="react-select"
