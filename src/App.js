@@ -18,8 +18,8 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<IffViewer />} />
-          <Route path="tiles" element={<TilesViewer />} />
+          {/* <Route index element={<IffViewer />} /> */}
+          <Route index element={<TilesViewer />} />
           <Route path="osm" element={<OsmViewer />} />
           <Route path="tms" element={<TmsViewer />} />
           <Route path="map-tiler" element={<MapTilerViewer />} />
