@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Orbitron&display=swap");
+
+
+
+.Card_s {
+  padding: 1px;
+  border-radius: var(--border-radius);
+  background: linear-gradient(-67deg, rgba(200, 216, 231, 0.7), rgba(255, 255, 255, 0.8));
+  overflow: hidden;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6), 2px 2px 12px #c8d8e7;
+  width: 380px;
+  margin-left: -100%;
+}
+
+.Card_sinner {
+  padding: 16px 16px;
+  background-color: #e2e9f4;
+  border-radius: var(--border-radius);
+}
+
+.container {
+  display: flex;
+}
+
+.Icon {
+  min-width: 46px;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius);
+  margin-right: 12px;
+  box-shadow: -2px -2px 6px rgba(255, 255, 255, 0.6), 2px 2px 12px #c8d8e7;
+}
+.Icon svg {
+  transform: translate(-1px, -1px);
+}
+
+label {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: block;
+  color: #3c4b66;
+  margin-bottom: 12px;
+  background: linear-gradient(45deg, #6b7b8f, #3c4b66);
+  -webkit-text-fill-color: transparent;
+}
+
+.InputContainer {
+  width: 100%;
+}
+
+input {
+  background-color: #e3edf7;
+  padding: 16px 32px;
+  border: none;
+  display: block;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  color: #a9b8c9;
+  transition: all 240ms ease-out;
+  width: 100%;
+}
+input::placeholder {
+  color: #6d7f8f;
+}
+input:focus {
+  outline: none;
+  color: #6d7f8f;
+  background-color: #eff5fa;
+}
+:root {
+    --top-shadow: inset 1px 1px 3px #c5d4e3, inset 2px 2px 6px #c5d4e3;
+    --bottom-shadow: inset -2px -2px 4px rgba(255,255,255, .7);
+  }
+  
+.Inputcontainer {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+.Inputcontainer:before, .Inputcontainer:after {
+  left: 0;
+  top: 0;
+  display: block;
+  content: "";
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.Inputcontainer:before {
+  box-shadow: var(--bottom-shadow);
+}
+.Inputcontainer:after {
+  box-shadow: var(--top-shadow);
+}
+.react-select__input-container{
+    box-shadow: var(--bottom-shadow) !important;
+
+}
+.pxis{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.card--single {
+    grid-row: auto/span 2;
+    grid-column: 1/-1;
+}
+.padding-large--l {
+    padding: 3.2rem;
+}
+.padding-x--l {
+    padding: 1.5rem 8.2rem;
+}
+.card--single h1, .card--single h2, .card--single h3, .card--single h4, .card--single p {
+    margin-top: 0;
+    text-align: center;
+    font-weight: normal;
+}

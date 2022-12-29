@@ -6,11 +6,15 @@ const apiKey = "https://api.maptiler.com/tiles/satellite-v2/?key=nECYiaZ6s0limOB
 
 const TileSource = [
   {
-    id: "1",
+    id: "city",
+    label: "City"
+  },
+  {
+    id: "satellite",
     label: "Satellite"
   },
   {
-    id: "2",
+    id: "border",
     label: "Borders and Lines"
   }
 ]
@@ -20,7 +24,30 @@ export default function TilesViewer() {
   const [currentTileSource, setCurrentTileSource] = React.useState();
   const SwitchViewer = (id) => {
     viewer && viewer.destroy();
-    if (id === "2") {
+    if (id === "city") {
+      setViewer(
+        OpenSeaDragon({
+          id: "openSeaDragon",
+          showNavigator: true,
+          navigatorPosition: 'BOTTOM_RIGHT',
+          blendTime: 0,
+          wrapHorizontal: true,
+          prefixUrl: "openseadragon-images/",
+          tileSources: {
+            height: 500 * 256,
+            width: 1024 * 500,
+            tileSize: 256,
+            zoomPerScroll: 1.2,
+            minLevel: 9,
+            getTileUrl: function (level, x, y) {
+              return "https://www.large-format.photography/gigapixelKacheln/Barcelona/TileGroup0/" +
+                (level - 8) + "-" + x + "-" + y + ".jpg";
+            }
+          },
+        })
+      );
+    }
+    else if (id === "border") {
       setViewer(
         OpenSeaDragon({
           id: "openSeaDragon",
@@ -80,19 +107,48 @@ export default function TilesViewer() {
       OpenSeaDragon({
         id: "openSeaDragon",
         showNavigator: true,
-        navigatorSizeRatio: 0.25,
-        blendTime: 0,
-        navigatorPosition: 'BOTTOM_RIGHT',
-        wrapHorizontal: true,
+        navigatorSizeRatio: 0.2,
+        minZoomImageRatio: 0.5,
+        maxZoomLevel:100,
+        constrainDuringPan: true,
+        navigatorPosition: 'TOP_LEFT',
+        maxZoomPixelRatio:5,
+        immediateRender: false,
+        smoothTileEdgesMinZoom: 100,
+        imageLoaderLimit: 5,
         prefixUrl: "openseadragon-images/",
         tileSources: {
-          height: 1024 * 256,
-          width: 1024 * 256,
+          height: 500 * 256,
+          width: 1024 * 500,
           tileSize: 256,
-          minLevel: 9,
+          tileOverlap: 1,
+          zoomPerScroll: 1,
+          defaultZoomLevel:8,
+          minLevel: 1,
+          // getTileUrl: function (level, x, y) {
+          //   function padding(i) {
+          //     var n = String(i),
+          //     m = 6 - n.length;
+          //   n = (m < 1) ? n : new Array(m + 1).join("0") + n;
+          //   return  n.substring(3);
+          //   }
+          //   console.log(level)
+          //   return "https://barcelonagigapixel.s3.us-east-2.amazonaws.com/giga2/BARCELONA_2022_01_19_502280x251140.tiles/" +
+          //     "l" + (level - 8) + "/" + padding(y) + "/" + `l${level - 8}_${padding(y)}_${padding(x)}` + ".jpg";
+          // }
           getTileUrl: function (level, x, y) {
-            return "http://s3.amazonaws.com/com.modestmaps.bluemarble/" +
-              (level - 8) + "-r" + y + "-c" + x + ".jpg";
+            function zeropad(i) {
+              var n = String(i),
+                m = 6 - n.length;
+              n = (m < 1) ? n : new Array(m + 1).join("0") + n;
+              return  n.substring(3);
+            };
+
+            console.log(zeropad(x))
+            console.log('y',zeropad(y))
+            console.log('level',(level - 8))
+            return "https://www.large-format.photography/gigapixelKacheln/Barcelona/TileGroup0/" +
+              (level - 8) + "-" + x + "-" + y + ".jpg";
           }
         },
       })
@@ -120,13 +176,11 @@ export default function TilesViewer() {
     };
   }, []);
 
-  console.log("viewer", viewer)
   return (
     <div
       className="App"
       style={{
         position: "relative",
-        width: "100%",
       }}
     >
       <div className="tilesTopRow">
@@ -143,7 +197,7 @@ export default function TilesViewer() {
       <div
         id="openSeaDragon"
         style={{
-          height: "600px",
+          height: "500px",
           width: "100%",
         }}
       ></div>

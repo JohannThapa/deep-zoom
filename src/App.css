@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Sacramento");
+:root {
+  --border-radius: 10px;
+  --dark-grey: #e2e9f4;
+}
+.bg-grey{
+  background: var(--dark-grey) !important;
+}
+
 .App {
   text-align: center;
 }
@@ -329,4 +338,61 @@
   color: #2e2f34;
   padding-right: 1rem;
   font-size: 1rem;
+}
+.search-container{  
+  -webkit-font-smoothing: antialiased;
+  color: #acbdce;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.45em;
+  background-color: #f0f0f0;
+  color: #404646;
+}
+.search-wrapper{
+  background: #e2e9f4;
+  display: grid;
+  height: 100%;
+  grid-template: 2fr/50%;
+  place-items: center;
+}
+.main-container {
+  margin: 5.6rem 0.8rem;
+}
+
+.grid-container {
+  margin: auto;
+  display: grid;
+  grid-gap: 1.1312rem;
+  grid-template-columns: repeat(auto-fit, 30rem);
+  grid-auto-rows: 10.8rem;
+  grid-auto-flow: dense;
+  justify-content: center;
+}
+.search-card {
+  grid-row: auto/span 1;
+  grid-column: auto/span 1;
+  background-color: white;
+  box-shadow: 1px 3px 3px rgba(0, 10, 20, 0.06);
+}
+.card--horizontal {
+  grid-column: auto/span 2;
+}
+.card__side-by-side--m {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.card--featured {
+  grid-row: auto/span 2;
+  grid-column: 1/-1;
+}
+.big-script {
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-family: "Sacramento", sans-serif;
+  font-size: 4.3em;
+  line-height: 1.15em;
+  text-align: center;
 }
