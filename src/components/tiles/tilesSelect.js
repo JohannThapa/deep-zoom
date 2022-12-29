@@ -21,9 +21,6 @@ const TileSourceSelect = ({
   onFileSetChange,
   tileSources = [],
 }) => {
-  console.log(currentTileSource);
-  console.log(onFileSetChange);
-  console.log("tileSources", tileSources);
   const tileSourcesCount = tileSources.length;
 
   if (!currentTileSource || tileSourcesCount < 2) return null;

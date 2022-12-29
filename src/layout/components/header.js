@@ -38,6 +38,7 @@ const Header = () => (
     </Link>
     {/* <CustomLink to="/">Custom</CustomLink> */}
     <CustomLink to="/">Tiles</CustomLink>
+    <CustomLink to="/image">Simple Image</CustomLink>
     <CustomLink to="/osm">OSM</CustomLink>
     <CustomLink to="/tms">TMS</CustomLink>
     <CustomLink to="/map-tiler">Map Tiler</CustomLink>

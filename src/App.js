@@ -13,6 +13,7 @@ import TilesViewer from './pages/tiles';
 import OsmViewer from './pages/osm';
 import TmsViewer from './pages/tms';
 import MapTilerViewer from './pages/maptiler';
+import ImageViewer from './pages/image';
 function App() {
   return (
     <div>
@@ -21,6 +22,7 @@ function App() {
           {/* <Route index element={<IffViewer />} /> */}
           <Route index element={<TilesViewer />} />
           <Route path="osm" element={<OsmViewer />} />
+          <Route path="image" element={<ImageViewer />} />
           <Route path="tms" element={<TmsViewer />} />
           <Route path="map-tiler" element={<MapTilerViewer />} />
           <Route path="simple" element={<SimpleViewer />} />

@@ -120,8 +120,7 @@ export default function TilesViewer() {
     };
   }, []);
 
-  console.log("currentTileSource", currentTileSource)
-  console.log("TileSource", TileSource)
+  console.log("viewer", viewer)
   return (
     <div
       className="App"
