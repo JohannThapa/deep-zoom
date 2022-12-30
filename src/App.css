@@ -396,3 +396,24 @@
   line-height: 1.15em;
   text-align: center;
 }
+
+.button-download{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    margin-right: 12px;
+    width: 130px;
+    min-height: 30px;
+    background: #5c6c82;
+    color: #e2e9f4;
+    font-weight: bolder;
+
+    width: 125px;
+    box-shadow: -2px -2px 6px rgb(255 255 255 / 60%), 2px 2px 12px #c8d8e7;
+}
+
+.d-f-center{
+  display: flex;
+  justify-content: center;
+}

@@ -42,7 +42,7 @@ const TileSourceSelect = ({
         maxMenuHeight={600}
         onChange={handleChange}
         options={tileSources}
-        placeholder="Filter work file sets"
+        placeholder="Filter tile sets"
         theme={(theme) => ({
           ...theme,
           borderRadius: 0,

@@ -16,6 +16,7 @@ import TmsViewer from './pages/tms';
 import MapTilerViewer from './pages/maptiler';
 import ImageViewer from './pages/image';
 import TileSearchSource from './components/search';
+import LegacyViewer from './pages/legacy';
 function App() {
   return (
     <div>
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           {/* <Route index element={<IffViewer />} /> */}
           <Route path="tiles" element={<TilesViewer />} />
+          <Route path="legacy" element={<LegacyViewer />} />
           <Route index element={<Downloader />} />
           <Route path="osm" element={<OsmViewer />} />
           <Route path="image" element={<ImageViewer />} />

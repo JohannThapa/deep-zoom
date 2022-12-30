@@ -55,12 +55,16 @@ export default function TilesViewer() {
           navigatorPosition: 'BOTTOM_RIGHT',
           blendTime: 0,
           wrapHorizontal: true,
+          imageLoaderLimit: 5,
+          constrainDuringPan: true,
+          immediateRender: false,
           prefixUrl: "openseadragon-images/",
           tileSources: {
             height: 1024 * 256,
             width: 1024 * 256,
             tileSize: 256,
             minLevel: 9,
+            imageLoaderLimit: 5,
             getTileUrl: function (level, x, y) {
 
               function zeropad(i) {
