@@ -9,7 +9,7 @@ export const Namer = (arr = [], name = "") => {
   const colPosition = index % COLUMN;
   const rowPosition = Math.floor((index - colPosition) / COLUMN);
   const position = rowPosition + "_" + colPosition;
-  return (parseInt(index)+'.png')
+  return (parseInt(index)+"-"+position+'.png')
   return (
     parseInt(index) +
     "-" +
