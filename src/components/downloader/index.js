@@ -63,6 +63,11 @@ function Downloader({ linkUrl = "", name = "" }) {
                 >
                 Download
             </a>
+            <a className="button-download" 
+                onClick={downloadPhoto}
+                >
+                Download name
+            </a>
         </div>
     );
 }
