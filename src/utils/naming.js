@@ -5,9 +5,11 @@ const TILE_HEIGHT = 2048;
 
 export const Namer = (arr = [], name = "") => {
   const index = name?.split(".")[0];
+  console.log(parseInt(index))
   const colPosition = index % COLUMN;
   const rowPosition = Math.floor((index - colPosition) / COLUMN);
   const position = rowPosition + "_" + colPosition;
+  return (parseInt(index)+'.png')
   return (
     parseInt(index) +
     "-" +

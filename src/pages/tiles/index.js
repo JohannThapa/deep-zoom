@@ -85,20 +85,26 @@ export default function TilesViewer() {
       setViewer(
         OpenSeaDragon({
           id: "openSeaDragon",
-          showNavigator: true,
+          showNavigator: false,
           navigatorSizeRatio: 0.25,
-          blendTime: 0,
+          blendTime: 1.5,
+          imageLoaderLimit: 10,
+          constrainDuringPan: true,
+          smoothTileEdgesMinZoom: 100,
           navigatorPosition: 'BOTTOM_RIGHT',
-          wrapHorizontal: true,
+          wrapHorizontal: false,
+          wrapVertical: false,
           prefixUrl: "openseadragon-images/",
           tileSources: {
-            height: 1024 * 256,
-            width: 1024 * 256,
+            height: 500 * 500,
+            width: 256 * 256,
+            tileOverlap: 1,
+            zoomPerScroll: 1.5,
             tileSize: 256,
-            minLevel: 9,
+            minLevel: 1,
             getTileUrl: function (level, x, y) {
-              return "http://s3.amazonaws.com/com.modestmaps.bluemarble/" +
-                (level - 8) + "-r" + y + "-c" + x + ".jpg";
+              return "CTS/" +
+                (level - 8) + "-r" + y + "-c" + x + ".webp";
             }
           },
         })
